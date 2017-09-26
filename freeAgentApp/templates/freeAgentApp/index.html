@@ -1,0 +1,14 @@
+{% if all_projects %}
+<h1>Project List</h1>
+<ul>
+    {% for project in all_projects %}
+    <li><a href="{% url 'freeAgentApp:detail' project.id %}">{{ project.title}}</a></li>
+    {% endfor%}
+</ul>
+    {% else %}
+        <h3>You have not created any projects yet</h3>
+{% endif %}
+
+
+
+
